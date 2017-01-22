@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.minicalculadora.devix.minicalculadora.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/Linear1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/edtUno"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="2dp"
+            android:background="#428db9"
+            android:hint="Ingresa numero uno"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textColor="#fff" />
+
+
+        <EditText
+            android:id="@+id/edtDos"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:background="#428db9"
+            android:hint="Ingresa numero dos"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            android:textColor="#fff" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_below="@+id/Linear1"
+        android:layout_alignLeft="@+id/Linear1"
+        android:layout_alignStart="@+id/Linear1">
+
+
+        <Button
+            android:id="@+id/btnSumar"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Suma"
+            android:onClick="Sumar"/>
+
+        <Button
+            android:id="@+id/btnRestar"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Resta"
+            android:onClick="Restar"/>
+
+        <Button
+            android:id="@+id/btnDivicion"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Divicion"
+            android:onClick="Dividir"/>
+
+        <Button
+            android:id="@+id/btnMultiplicar"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="Multiplicar"
+            android:onClick="Multiplicar"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Linear3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/Linear2">
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#428db9"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Resultado"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="20sp" />
+    </LinearLayout>
+</RelativeLayout>
